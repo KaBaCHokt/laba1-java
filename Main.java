@@ -10,19 +10,19 @@ public class Main {
         System.out.println("    Задание 1: ");
         System.out.print("      Введите число с дробной частью: ");
         double fractionInput = scanner.nextDouble();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.fraction(fractionInput));
 
         System.out.println("    Задание 3:  ");
         System.out.print("      Введите символ цифры: ");
         char charInput = scanner.next().charAt(0);
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.charToNum(charInput));
 
         System.out.println("    Задание 5: ");
         System.out.print("      Введите число для проверки на двузначность: ");
         int twoDigitsInput = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.is2Digits(twoDigitsInput));
 
         System.out.println("    Задание 7: ");
@@ -30,7 +30,7 @@ public class Main {
         int a = scanner.nextInt();
         int b = scanner.nextInt();
         int num = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.isInRange(a, b, num));
 
         System.out.println("    Задание 9: ");
@@ -38,20 +38,20 @@ public class Main {
         int equalA = scanner.nextInt();
         int equalB = scanner.nextInt();
         int equalC = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine();
         System.out.println(main.isEqual(equalA, equalB, equalC));
 
         System.out.println("Задание блока 2: ");
         System.out.println("    Задание 1: ");
         System.out.print("      Введите число для вычисления модуля: ");
         int absInput = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.abs(absInput));
 
         System.out.println("    Задание 3: ");
         System.out.print("      Введите число для проверки на кратность 3 или 5: ");
         int is35Input = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.is35(is35Input));
 
         System.out.println("    Задание 5: ");
@@ -59,51 +59,51 @@ public class Main {
         int max3X = scanner.nextInt();
         int max3Y = scanner.nextInt();
         int max3Z = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.max3(max3X, max3Y, max3Z));
 
         System.out.println("    Задание 7: ");
         System.out.print("      Введите два числа (x, y) для суммирования: ");
         int sum2X = scanner.nextInt();
         int sum2Y = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.sum2(sum2X, sum2Y));
 
         System.out.println("    Задание 9: ");
         System.out.print("      Введите число от 1 до 7 для определения дня недели: ");
         int dayInput = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.day(dayInput));
 
         System.out.println("Задание блока 3: ");
         System.out.println("    Задание 1: ");
         System.out.print("      Введите число для вывода последовательности: ");
         int listNumsInput = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.listNums(listNumsInput));
 
         System.out.println("    Задание 3: ");
         System.out.print("      Введите число для вывода четных чисел: ");
         int chetInput = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.chet(chetInput));
 
         System.out.println("    Задание 5: ");
         System.out.print("      Введите число для подсчета количества цифр: ");
         long numLenInput = scanner.nextLong();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.numLen(numLenInput));
 
         System.out.println("    Задание 7: ");
         System.out.print("      Введите число для вывода квадрата: ");
         int squareInput = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.square(squareInput));
 
         System.out.println("    Задание 9: ");
         System.out.print("      Введите число для вывода прямоугольного треугольника: ");
         int rightTriangleInput = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.rightTriangle(rightTriangleInput));
 
         System.out.println("Задание блока 4: ");
@@ -113,7 +113,7 @@ public class Main {
         int[] arr = Arrays.stream(arrInput).mapToInt(Integer::parseInt).toArray();
         System.out.print("      Введите число для поиска: ");
         int x = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); 
         System.out.println(main.findFirst(arr, x));
 
         System.out.println("    Задание 3: ");
