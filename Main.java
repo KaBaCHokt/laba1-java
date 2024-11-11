@@ -168,19 +168,35 @@ public class Main {
         scanner.close();
     }
 
-    public String fraction(double x) {
-        return "      Входные данные: " + x + ", Ответ: " + (x - (int) x);
+    public double fraction(double x) {
+        System.out.print("  Входные данные: ");
+        System.out.println(x);
+        System.out.print("  Ответ: ");
+        return x - (int)x;
     }
 
-    public String charToNum(char x) {
-        return "      Входные данные: " + x + ", Ответ: " + (x - '0');
+    public int charToNum(char x) {
+        System.out.print("  Входные данные: ");
+        System.out.println(x);
+        System.out.print("  Ответ: ");
+        return x - '0';
     }
 
-    public String is2Digits(int x) {
-        return "      Входные данные: " + x + ", Ответ: " + ((x >= 10 && x <= 99) || (x <= -10 && x >= -99));
+    public boolean is2Digits(int x) {
+        System.out.print("  Входные данные: ");
+        System.out.println(x);
+        System.out.print("  Ответ: ");
+        return (x >= 10 && x <= 99) || (x <= -10 && x >= -99);
     }
 
-    public String isInRange(int a, int b, int num) {
+    public boolean isInRange(int a, int b, int num) {
+        System.out.print("  Входные данные: ");
+        System.out.print(a);
+        System.out.print(" ");
+        System.out.print(b);
+        System.out.print(" ");
+        System.out.println(num);
+        System.out.print("  Ответ: ");
         int min, max;
         if (a < b) {
             min = a;
@@ -189,75 +205,123 @@ public class Main {
             min = b;
             max = a;
         }
-        return "      Входные данные: a=" + a + ", b=" + b + ", num=" + num + ", Ответ: " + (num >= min && num <= max);
+        return num >= min && num <= max;
     }
 
-    public String isEqual(int a, int b, int c) {
-        return "      Входные данные: a=" + a + ", b=" + b + ", c=" + c + ", Ответ: " + ((a == b) && (b == c));
+    public boolean isEqual(int a, int b, int c) {
+        System.out.print("  Входные данные: ");
+        System.out.print(a);
+        System.out.print(" ");
+        System.out.print(b);
+        System.out.print(" ");
+        System.out.println(c);
+        System.out.print("  Ответ: ");
+        return (a == b) && (b == c);
     }
 
-    public String abs(int x) {
-        int nachalo = x;
-        return "      Входные данные: " + nachalo + ", Ответ: " + (x < 0 ? -x : x);
+   public int abs(int x) {
+        System.out.print("  Входные данные: ");
+        System.out.println(x);
+        System.out.print("  Ответ: ");
+        if (x < 0) {
+            return -x;
+        }
+        return x;
     }
 
-    public String is35(int x) {
+    public boolean is35(int x) {
+        System.out.print("  Входные данные: ");
+        System.out.println(x);
+        System.out.print("  Ответ: ");
         boolean del3 = (x % 3 == 0);
         boolean del5 = (x % 5 == 0);
-        return "      Входные данные: " + x + ", Ответ: " + ((del3 || del5) && !(del3 && del5));
+        return (del3 || del5) && !(del3 && del5);
     }
 
-    public String max3(int x, int y, int z) {
+     public int max3(int x, int y, int z) {
+        System.out.print("  Входные данные: ");
+        System.out.print(x);
+        System.out.print(" ");
+        System.out.print(y);
+        System.out.print(" ");
+        System.out.println(z);
+        System.out.print("  Ответ: ");
         int maxXY;
         if (x > y) {
             maxXY = x;
         } else {
             maxXY = y;
         }
-        int max = maxXY > z ? maxXY : z;
-        return "      Входные данные: x=" + x + ", y=" + y + ", z=" + z + ", Ответ: " + max;
+        if (maxXY > z) {
+            return maxXY;
+        } else {
+            return z;
+        }
     }
 
-    public String sum2(int x, int y) {
+    public int sum2(int x, int y) {
+        System.out.print("  Входные данные: ");
+        System.out.print(x);
+        System.out.print(" ");
+        System.out.println(y);
+        System.out.print("  Ответ: ");
         int sum = x + y;
-        return "      Входные данные: x=" + x + ", y=" + y + ", Ответ: " + (sum >= 10 && sum <= 19 ? 20 : sum);
+        if (sum >= 10 && sum <= 19) {
+            return 20;
+        } else {
+            return sum;
+        }
     }
 
-    public String day(int x) {
-        String day = switch (x) {
-            case 1 -> "понедельник";
-            case 2 -> "вторник";
-            case 3 -> "среда";
-            case 4 -> "четверг";
-            case 5 -> "пятница";
-            case 6 -> "суббота";
-            case 7 -> "воскресенье";
-            default -> "это не день недели";
-        };
-        return "      Входные данные: " + x + ", Ответ: " + day;
+     public String day(int x) {
+        switch (x) {
+            case 1:
+                return "понедельник";
+            case 2:
+                return "вторник";
+            case 3:
+                return "среда";
+            case 4:
+                return "четверг";
+            case 5:
+                return "пятница";
+            case 6:
+                return "суббота";
+            case 7:
+                return "воскресенье";
+            default:
+                return "это не день недели";
+        }
     }
 
-    public String listNums(int x) {
+   public String listNums(int x) {
         StringBuilder result = new StringBuilder();
+        System.out.print("  Входные данные: ");
+        System.out.println(x);
         for (int i = 0; i <= x; i++) {
             result.append(i).append(" ");
         }
-        return "      Входные данные: " + x + ", Ответ: " + result.toString();
+        System.out.print("  Ответ: ");
+        return result.toString();
     }
 
-    public String chet(int x) {
+     public String chet(int x) {
         StringBuilder result = new StringBuilder();
+        System.out.print("  Входные данные: ");
+        System.out.println(x);
         for (int i = 0; i <= x; i += 2) {
             result.append(i).append(" ");
         }
-        return "      Входные данные: " + x + ", Ответ: " + result.toString();
+        System.out.print("  Ответ: ");
+        return result.toString();
     }
 
-    public String numLen(long x) {
-        long stroka = x;
+     public int numLen(long x) {
         int count = 0;
+        System.out.print("  Входные данные: ");
+        System.out.println(x);
         if (x == 0) {
-            return "      Входные данные: " + x + ", Ответ: 1";
+            return 1;
         }
         if (x < 0) {
             x = -x;
@@ -267,74 +331,81 @@ public class Main {
             x /= 10;
             count++;
         }
-        return "      Входные данные: " + stroka + ", Ответ: " + count;
+        System.out.print("  Ответ: ");
+        return count;
     }
 
-    public String square(int x) {
-        StringBuilder result = new StringBuilder();
-        result.append("      Входные данные: ").append(x).append(", Ответ: \n");
+     public void square(int x) {
+        System.out.print("  Входные данные: ");
+        System.out.println(x);
+        System.out.print("  Ответ: ");
+        System.out.println();
         for (int i = 0; i < x; i++) {
-            result.append("          ");
+            System.out.print("          ");
             for (int j = 0; j < x; j++) {
-                result.append("*");
+                System.out.print("*");
             }
-            result.append("\n");
+            System.out.println();
         }
-        return result.toString();
     }
 
-    public String rightTriangle(int x) {
-        StringBuilder result = new StringBuilder();
-        result.append("      Входные данные: ").append(x).append(", Ответ: \n");
+     public void rightTriangle(int x) {
+        System.out.print("  Входные данные: ");
+        System.out.println(x);
+        System.out.print("  Ответ: ");
+        System.out.println();
         for (int i = 1; i <= x; i++) {
             for (int j = 0; j < x - i; j++) {
-                result.append(" ");
+                System.out.print(" ");
             }
-            result.append("          ");
+            System.out.print("          ");
             for (int k = 0; k < i; k++) {
-                result.append("*");
+                System.out.print("*");
             }
-            result.append("\n");
+            System.out.println();
         }
-        return result.toString();
     }
 
-    public String findFirst(int[] arr, int x) {
+     public int findFirst(int[] arr, int x) {
+        System.out.print("  Входные данные: ");
+        System.out.println(x);
+        System.out.print("  Ответ: ");
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == x) {
-                return "      Входные данные: массив=" + Arrays.toString(arr) + ", число=" + x + ", Ответ: " + i;
+                return i;
             }
         }
-        return "      Входные данные: массив=" + Arrays.toString(arr) + ", число=" + x + ", Ответ: -1";
+        return -1;
     }
 
-    public String maxAbs(int[] arr) {
+    public int maxAbs(int[] arr) {
+        System.out.print("  Ответ: ");
         if (arr.length == 0) {
             throw new IllegalArgumentException("Массив не может быть пустым");
         }
-
         int max = arr[0];
         for (int i = 1; i < arr.length; i++) {
             if (Math.abs(arr[i]) > Math.abs(max)) {
                 max = arr[i];
             }
         }
-        return "      Входные данные: массив=" + Arrays.toString(arr) + ", Ответ: " + max;
+        return max;
     }
 
     public int[] add(int[] arr, int[] ins, int pos) {
+        System.out.print("  Ответ: ");
         if (pos < 0 || pos > arr.length) {
-            return new int[0];
+            return null;
         }
         int[] newArray = new int[arr.length + ins.length];
         System.arraycopy(arr, 0, newArray, 0, pos);
         System.arraycopy(ins, 0, newArray, pos, ins.length);
         System.arraycopy(arr, pos, newArray, pos + ins.length, arr.length - pos);
-
         return newArray;
     }
 
-    public int[] reverseBack(int[] arr) {
+     public int[] reverseBack(int[] arr) {
+        System.out.print("  Ответ: ");
         int[] reversed = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
             reversed[i] = arr[arr.length - 1 - i];
@@ -342,21 +413,21 @@ public class Main {
         return reversed;
     }
 
-    public int[] findAll(int[] arr, int x) {
+   public int[] findAll(int[] arr, int x) {
+        System.out.print("  Ответ: ");
         int count = 0;
         for (int num : arr) {
             if (num == x) {
                 count++;
             }
         }
-        int[] indices = new int[count];
+        int[] ind = new int[count];
         int index = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == x) {
-                indices[index++] = i;
+                ind[index++] = i;
             }
         }
-
-        return indices;
+        return ind;
     }
 }
